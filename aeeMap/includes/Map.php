@@ -45,19 +45,18 @@ ini_set('display_errors',1);error_reporting(E_ALL);
 			
 			</script>
 
-			<div id="IndexPage_Left_top">
-            	<h1>Country: <span class="label" id="country_name"> </span></h1>                    
-        		<table >
-                	<tbody>                    
+	<div id="IndexPage_Left_top">
+            <h1>Country: <span class="label" id="country_name"> </span></h1>                    
+        	<table >
+                   <tbody>                    
                       <tr>
-                      <td><h4>Regional Representative: </h4></td>
-                      <td id="firstname" name="firstname" class="firstname"></td>
-                      <td id="lastname" name="lastname" class="lastname"></td>
+                      <td><h4>Regional Representative:</h4></td>
+                      <td style="text-align:right"><h3><span class="label" id="firstname"></span> <span class="label" id="lastname"></span></h3></td>
                       </tr>
                       <tr height="20px"></tr>
                       <tr height="200px" align="bottom">
-                      <td align="bottom"><h4> Photo:</h4></td><!--get Rep photo from database based on country from svg to display-->
-                      <td id="photo" name="photo" class="photo" background="../images/profile/placeholder.png"</td>
+                      <td align="bottom"><h4> Photo:</h4></td>
+                      <td id="photo" name="photo" class="photo" background="../images/profile/placeholder.png" colspan="2"></td>
                       </tr>
                       <tr height="20px"></tr>
                       <tr>
@@ -69,7 +68,7 @@ ini_set('display_errors',1);error_reporting(E_ALL);
 					 
                     </tbody>
               	</table>	
-            </div>
+           </div>
         	<div id="IndexPage_Left_bottom">
             
             	<div id="contactable"></div>

@@ -14,7 +14,7 @@
                 <p class="grey"><h7>0945</h7></p>                
 			</div>
   			<div id="ContactRight">
-            	<p class="grey"><h7>Email:africa@aeegroup.co.za</h7></p>
+            	<p class="grey"><h7>Email:africa@aeea.org</h7></p>
                 <p class="grey"><h7>Phone:015 1234567</h7></p>
         	</div>
       	</div>

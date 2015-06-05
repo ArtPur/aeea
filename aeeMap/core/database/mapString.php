@@ -19,9 +19,9 @@ require_once 'connectMap.php';
 		 
 	/** Check if there is data, if not give default data **/		
 	if(empty($result)) {
-    $json_data  = array( 'firstname' => 'www.aeegroup.co.za',
+    $json_data  = array( 'firstname' => 'www.aeea.org',
 	                     'lastname' => '',
-					     'email' => 'africa@aeegroup.co.za',
+					     'email' => 'africa@aeea.org',
 					     'photo' => '../images/Afrizone2.png');
   	} 
 	else {		//******* How do I build this array from database results? *******//

@@ -17,29 +17,28 @@ require_once 'connectMap.php';
 	/** create the array **/
 	$json_data=array();
 		 
-	/** Check if there is data, if not give default data **/		
+/** Check if there is data, if not give default data **/		
 	if(empty($result)) {
-    $json_data  = array( 'firstname' => 'www.aeea.org',
-	                     'lastname' => '',
-					     'email' => 'africa@aeea.org',
-					     'photo' => '../images/Afrizone2.png');
+    	$json_data  = array( 	'firstname' => 'www.aeegroup.co.za',
+	                     	'lastname' => '',
+				'email' => 'africa@aeegroup.co.za',
+				'photo' => '../images/Afrizone2.png');
+						   
+ 	 	echo json_encode($json_data);
+	 	return $json_data;	
   	} 
-	else {		//******* How do I build this array from database results? *******//
-	$json_data  = array( 'firstname' => $result['firstname'],
-	                     'lastname' => $result['lastname'],
-					     'email' => $result['email'],
-					     'photo' => $result['photo']);
-
-		echo $json_data['firstname'] . " " . $json_data['lastname'] . '<br />';
-		echo $json_data['email'] . '<br />';		
-	}
-	/** built in PHP function to encode the data in to JSON format 	**/	
-	 header('Content-Type: application/json');    
- 	 echo json_encode($json_data);
-	 return $json_data;	
+		  
+	$json_data  = array	'firstname' => $result['firstname'],
+	                     	'lastname' => $result['lastname'],
+			      	'email' => $result['email']);
+			      	//'photo' => $result['photo']);
+						 						 
+		/** built in PHP function to encode the data in to JSON format 	**/						 
+	 	header('Content-Type: application/json');    
+ 	 	echo json_encode($json_data);
+	 	return $json_data;
+	 
 	/*** close the database connection ***/
 	$dbh = null;	
 	
-		
- 
 ?>

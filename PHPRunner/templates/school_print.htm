@@ -1,0 +1,700 @@
+<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel school print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN P__O__Box_fieldheadercolumn}
+<th class="runner-cc {$P__O__Box_class}" {$P__O__Box_style}>
+	{BEGIN P__O__Box_fieldheader}
+	<b>{$label school P__O__Box}</b>
+	{END P__O__Box_fieldheader}
+</th>
+{END P__O__Box_fieldheadercolumn}
+	{BEGIN Postal_code_fieldheadercolumn}
+<th class="runner-cc {$Postal_code_class}" {$Postal_code_style}>
+	{BEGIN Postal_code_fieldheader}
+	<b>{$label school Postal_code}</b>
+	{END Postal_code_fieldheader}
+</th>
+{END Postal_code_fieldheadercolumn}
+	{BEGIN Province_fieldheadercolumn}
+<th class="runner-cc {$Province_class}" {$Province_style}>
+	{BEGIN Province_fieldheader}
+	<b>{$label school Province}</b>
+	{END Province_fieldheader}
+</th>
+{END Province_fieldheadercolumn}
+	{BEGIN school_id_fieldheadercolumn}
+<th class="runner-cc {$school_id_class}" {$school_id_style}>
+	{BEGIN school_id_fieldheader}
+	<b>{$label school school_id}</b>
+	{END school_id_fieldheader}
+</th>
+{END school_id_fieldheadercolumn}
+	{BEGIN School_Name_fieldheadercolumn}
+<th class="runner-cc {$School_Name_class}" {$School_Name_style}>
+	{BEGIN School_Name_fieldheader}
+	<b>{$label school School_Name}</b>
+	{END School_Name_fieldheader}
+</th>
+{END School_Name_fieldheadercolumn}
+	{BEGIN Registration_Number_fieldheadercolumn}
+<th class="runner-cc {$Registration_Number_class}" {$Registration_Number_style}>
+	{BEGIN Registration_Number_fieldheader}
+	<b>{$label school Registration_Number}</b>
+	{END Registration_Number_fieldheader}
+</th>
+{END Registration_Number_fieldheadercolumn}
+	{BEGIN Registration_Date_fieldheadercolumn}
+<th class="runner-cc {$Registration_Date_class}" {$Registration_Date_style}>
+	{BEGIN Registration_Date_fieldheader}
+	<b>{$label school Registration_Date}</b>
+	{END Registration_Date_fieldheader}
+</th>
+{END Registration_Date_fieldheadercolumn}
+	{BEGIN School_Type_fieldheadercolumn}
+<th class="runner-cc {$School_Type_class}" {$School_Type_style}>
+	{BEGIN School_Type_fieldheader}
+	<b>{$label school School_Type}</b>
+	{END School_Type_fieldheader}
+</th>
+{END School_Type_fieldheadercolumn}
+	{BEGIN Latitude_fieldheadercolumn}
+<th class="runner-cc {$Latitude_class}" {$Latitude_style}>
+	{BEGIN Latitude_fieldheader}
+	<b>{$label school Latitude}</b>
+	{END Latitude_fieldheader}
+</th>
+{END Latitude_fieldheadercolumn}
+	{BEGIN Longditude_fieldheadercolumn}
+<th class="runner-cc {$Longditude_class}" {$Longditude_style}>
+	{BEGIN Longditude_fieldheader}
+	<b>{$label school Longditude}</b>
+	{END Longditude_fieldheader}
+</th>
+{END Longditude_fieldheadercolumn}
+	{BEGIN Administrator_fieldheadercolumn}
+<th class="runner-cc {$Administrator_class}" {$Administrator_style}>
+	{BEGIN Administrator_fieldheader}
+	<b>{$label school Administrator}</b>
+	{END Administrator_fieldheader}
+</th>
+{END Administrator_fieldheadercolumn}
+	{BEGIN Principal_fieldheadercolumn}
+<th class="runner-cc {$Principal_class}" {$Principal_style}>
+	{BEGIN Principal_fieldheader}
+	<b>{$label school Principal}</b>
+	{END Principal_fieldheader}
+</th>
+{END Principal_fieldheadercolumn}
+	{BEGIN Address_fieldheadercolumn}
+<th class="runner-cc {$Address_class}" {$Address_style}>
+	{BEGIN Address_fieldheader}
+	<b>{$label school Address}</b>
+	{END Address_fieldheader}
+</th>
+{END Address_fieldheadercolumn}
+	{BEGIN City_fieldheadercolumn}
+<th class="runner-cc {$City_class}" {$City_style}>
+	{BEGIN City_fieldheader}
+	<b>{$label school City}</b>
+	{END City_fieldheader}
+</th>
+{END City_fieldheadercolumn}
+	{BEGIN Country_fieldheadercolumn}
+<th class="runner-cc {$Country_class}" {$Country_style}>
+	{BEGIN Country_fieldheader}
+	<b>{$label school Country}</b>
+	{END Country_fieldheader}
+</th>
+{END Country_fieldheadercolumn}
+	{BEGIN E_mail_fieldheadercolumn}
+<th class="runner-cc {$E_mail_class}" {$E_mail_style}>
+	{BEGIN E_mail_fieldheader}
+	<b>{$label school E_mail}</b>
+	{END E_mail_fieldheader}
+</th>
+{END E_mail_fieldheadercolumn}
+	{BEGIN School_Phone_fieldheadercolumn}
+<th class="runner-cc {$School_Phone_class}" {$School_Phone_style}>
+	{BEGIN School_Phone_fieldheader}
+	<b>{$label school School_Phone}</b>
+	{END School_Phone_fieldheader}
+</th>
+{END School_Phone_fieldheadercolumn}
+	{BEGIN Admnistrators_Phone_fieldheadercolumn}
+<th class="runner-cc {$Admnistrators_Phone_class}" {$Admnistrators_Phone_style}>
+	{BEGIN Admnistrators_Phone_fieldheader}
+	<b>{$label school Admnistrators_Phone}</b>
+	{END Admnistrators_Phone_fieldheader}
+</th>
+{END Admnistrators_Phone_fieldheadercolumn}
+	{BEGIN Cresh_fieldheadercolumn}
+<th class="runner-cc {$Cresh_class}" {$Cresh_style}>
+	{BEGIN Cresh_fieldheader}
+	<b>{$label school Cresh}</b>
+	{END Cresh_fieldheader}
+</th>
+{END Cresh_fieldheadercolumn}
+	{BEGIN Grade_R_fieldheadercolumn}
+<th class="runner-cc {$Grade_R_class}" {$Grade_R_style}>
+	{BEGIN Grade_R_fieldheader}
+	<b>{$label school Grade_R}</b>
+	{END Grade_R_fieldheader}
+</th>
+{END Grade_R_fieldheadercolumn}
+	{BEGIN Grade_0_fieldheadercolumn}
+<th class="runner-cc {$Grade_0_class}" {$Grade_0_style}>
+	{BEGIN Grade_0_fieldheader}
+	<b>{$label school Grade_0}</b>
+	{END Grade_0_fieldheader}
+</th>
+{END Grade_0_fieldheadercolumn}
+	{BEGIN Grade_1_fieldheadercolumn}
+<th class="runner-cc {$Grade_1_class}" {$Grade_1_style}>
+	{BEGIN Grade_1_fieldheader}
+	<b>{$label school Grade_1}</b>
+	{END Grade_1_fieldheader}
+</th>
+{END Grade_1_fieldheadercolumn}
+	{BEGIN Grade_2_fieldheadercolumn}
+<th class="runner-cc {$Grade_2_class}" {$Grade_2_style}>
+	{BEGIN Grade_2_fieldheader}
+	<b>{$label school Grade_2}</b>
+	{END Grade_2_fieldheader}
+</th>
+{END Grade_2_fieldheadercolumn}
+	{BEGIN Grade_3_fieldheadercolumn}
+<th class="runner-cc {$Grade_3_class}" {$Grade_3_style}>
+	{BEGIN Grade_3_fieldheader}
+	<b>{$label school Grade_3}</b>
+	{END Grade_3_fieldheader}
+</th>
+{END Grade_3_fieldheadercolumn}
+	{BEGIN Grade_4_fieldheadercolumn}
+<th class="runner-cc {$Grade_4_class}" {$Grade_4_style}>
+	{BEGIN Grade_4_fieldheader}
+	<b>{$label school Grade_4}</b>
+	{END Grade_4_fieldheader}
+</th>
+{END Grade_4_fieldheadercolumn}
+	{BEGIN Grade_5_fieldheadercolumn}
+<th class="runner-cc {$Grade_5_class}" {$Grade_5_style}>
+	{BEGIN Grade_5_fieldheader}
+	<b>{$label school Grade_5}</b>
+	{END Grade_5_fieldheader}
+</th>
+{END Grade_5_fieldheadercolumn}
+	{BEGIN Grade_6_fieldheadercolumn}
+<th class="runner-cc {$Grade_6_class}" {$Grade_6_style}>
+	{BEGIN Grade_6_fieldheader}
+	<b>{$label school Grade_6}</b>
+	{END Grade_6_fieldheader}
+</th>
+{END Grade_6_fieldheadercolumn}
+	{BEGIN Grade_7_fieldheadercolumn}
+<th class="runner-cc {$Grade_7_class}" {$Grade_7_style}>
+	{BEGIN Grade_7_fieldheader}
+	<b>{$label school Grade_7}</b>
+	{END Grade_7_fieldheader}
+</th>
+{END Grade_7_fieldheadercolumn}
+	{BEGIN Grade_8_fieldheadercolumn}
+<th class="runner-cc {$Grade_8_class}" {$Grade_8_style}>
+	{BEGIN Grade_8_fieldheader}
+	<b>{$label school Grade_8}</b>
+	{END Grade_8_fieldheader}
+</th>
+{END Grade_8_fieldheadercolumn}
+	{BEGIN Grade_9_fieldheadercolumn}
+<th class="runner-cc {$Grade_9_class}" {$Grade_9_style}>
+	{BEGIN Grade_9_fieldheader}
+	<b>{$label school Grade_9}</b>
+	{END Grade_9_fieldheader}
+</th>
+{END Grade_9_fieldheadercolumn}
+	{BEGIN Grade_10_fieldheadercolumn}
+<th class="runner-cc {$Grade_10_class}" {$Grade_10_style}>
+	{BEGIN Grade_10_fieldheader}
+	<b>{$label school Grade_10}</b>
+	{END Grade_10_fieldheader}
+</th>
+{END Grade_10_fieldheadercolumn}
+	{BEGIN Grade_11_fieldheadercolumn}
+<th class="runner-cc {$Grade_11_class}" {$Grade_11_style}>
+	{BEGIN Grade_11_fieldheader}
+	<b>{$label school Grade_11}</b>
+	{END Grade_11_fieldheader}
+</th>
+{END Grade_11_fieldheadercolumn}
+	{BEGIN Grade_12_fieldheadercolumn}
+<th class="runner-cc {$Grade_12_class}" {$Grade_12_style}>
+	{BEGIN Grade_12_fieldheader}
+	<b>{$label school Grade_12}</b>
+	{END Grade_12_fieldheader}
+</th>
+{END Grade_12_fieldheadercolumn}
+	{BEGIN TOTAL_Students_fieldheadercolumn}
+<th class="runner-cc {$TOTAL_Students_class}" {$TOTAL_Students_style}>
+	{BEGIN TOTAL_Students_fieldheader}
+	<b>{$label school TOTAL_Students}</b>
+	{END TOTAL_Students_fieldheader}
+</th>
+{END TOTAL_Students_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN P__O__Box_fieldcolumn}
+<td  class="runner-cc {$P__O__Box_class}" {$P__O__Box_style} {$recordattrs}>
+	{$P__O__Box_value}
+</td>
+{END P__O__Box_fieldcolumn}
+	{BEGIN Postal_code_fieldcolumn}
+<td  class="runner-cc {$Postal_code_class}" {$Postal_code_style} {$recordattrs}>
+	{$Postal_code_value}
+</td>
+{END Postal_code_fieldcolumn}
+	{BEGIN Province_fieldcolumn}
+<td  class="runner-cc {$Province_class}" {$Province_style} {$recordattrs}>
+	{$Province_value}
+</td>
+{END Province_fieldcolumn}
+	{BEGIN school_id_fieldcolumn}
+<td  class="runner-cc {$school_id_class}" {$school_id_style} {$recordattrs}>
+	{$school_id_value}
+</td>
+{END school_id_fieldcolumn}
+	{BEGIN School_Name_fieldcolumn}
+<td  class="runner-cc {$School_Name_class}" {$School_Name_style} {$recordattrs}>
+	{$School_Name_value}
+</td>
+{END School_Name_fieldcolumn}
+	{BEGIN Registration_Number_fieldcolumn}
+<td  class="runner-cc {$Registration_Number_class}" {$Registration_Number_style} {$recordattrs}>
+	{$Registration_Number_value}
+</td>
+{END Registration_Number_fieldcolumn}
+	{BEGIN Registration_Date_fieldcolumn}
+<td  class="runner-cc {$Registration_Date_class}" {$Registration_Date_style} {$recordattrs}>
+	{$Registration_Date_value}
+</td>
+{END Registration_Date_fieldcolumn}
+	{BEGIN School_Type_fieldcolumn}
+<td  class="runner-cc {$School_Type_class}" {$School_Type_style} {$recordattrs}>
+	{$School_Type_value}
+</td>
+{END School_Type_fieldcolumn}
+	{BEGIN Latitude_fieldcolumn}
+<td  class="runner-cc {$Latitude_class}" {$Latitude_style} {$recordattrs}>
+	{$Latitude_value}
+</td>
+{END Latitude_fieldcolumn}
+	{BEGIN Longditude_fieldcolumn}
+<td  class="runner-cc {$Longditude_class}" {$Longditude_style} {$recordattrs}>
+	{$Longditude_value}
+</td>
+{END Longditude_fieldcolumn}
+	{BEGIN Administrator_fieldcolumn}
+<td  class="runner-cc {$Administrator_class}" {$Administrator_style} {$recordattrs}>
+	{$Administrator_value}
+</td>
+{END Administrator_fieldcolumn}
+	{BEGIN Principal_fieldcolumn}
+<td  class="runner-cc {$Principal_class}" {$Principal_style} {$recordattrs}>
+	{$Principal_value}
+</td>
+{END Principal_fieldcolumn}
+	{BEGIN Address_fieldcolumn}
+<td  class="runner-cc {$Address_class}" {$Address_style} {$recordattrs}>
+	{$Address_value}
+</td>
+{END Address_fieldcolumn}
+	{BEGIN City_fieldcolumn}
+<td  class="runner-cc {$City_class}" {$City_style} {$recordattrs}>
+	{$City_value}
+</td>
+{END City_fieldcolumn}
+	{BEGIN Country_fieldcolumn}
+<td  class="runner-cc {$Country_class}" {$Country_style} {$recordattrs}>
+	{$Country_value}
+</td>
+{END Country_fieldcolumn}
+	{BEGIN E_mail_fieldcolumn}
+<td  class="runner-cc {$E_mail_class}" {$E_mail_style} {$recordattrs}>
+	{$E_mail_value}
+</td>
+{END E_mail_fieldcolumn}
+	{BEGIN School_Phone_fieldcolumn}
+<td  class="runner-cc {$School_Phone_class}" {$School_Phone_style} {$recordattrs}>
+	{$School_Phone_value}
+</td>
+{END School_Phone_fieldcolumn}
+	{BEGIN Admnistrators_Phone_fieldcolumn}
+<td  class="runner-cc {$Admnistrators_Phone_class}" {$Admnistrators_Phone_style} {$recordattrs}>
+	{$Admnistrators_Phone_value}
+</td>
+{END Admnistrators_Phone_fieldcolumn}
+	{BEGIN Cresh_fieldcolumn}
+<td  class="runner-cc {$Cresh_class}" {$Cresh_style} {$recordattrs}>
+	{$Cresh_value}
+</td>
+{END Cresh_fieldcolumn}
+	{BEGIN Grade_R_fieldcolumn}
+<td  class="runner-cc {$Grade_R_class}" {$Grade_R_style} {$recordattrs}>
+	{$Grade_R_value}
+</td>
+{END Grade_R_fieldcolumn}
+	{BEGIN Grade_0_fieldcolumn}
+<td  class="runner-cc {$Grade_0_class}" {$Grade_0_style} {$recordattrs}>
+	{$Grade_0_value}
+</td>
+{END Grade_0_fieldcolumn}
+	{BEGIN Grade_1_fieldcolumn}
+<td  class="runner-cc {$Grade_1_class}" {$Grade_1_style} {$recordattrs}>
+	{$Grade_1_value}
+</td>
+{END Grade_1_fieldcolumn}
+	{BEGIN Grade_2_fieldcolumn}
+<td  class="runner-cc {$Grade_2_class}" {$Grade_2_style} {$recordattrs}>
+	{$Grade_2_value}
+</td>
+{END Grade_2_fieldcolumn}
+	{BEGIN Grade_3_fieldcolumn}
+<td  class="runner-cc {$Grade_3_class}" {$Grade_3_style} {$recordattrs}>
+	{$Grade_3_value}
+</td>
+{END Grade_3_fieldcolumn}
+	{BEGIN Grade_4_fieldcolumn}
+<td  class="runner-cc {$Grade_4_class}" {$Grade_4_style} {$recordattrs}>
+	{$Grade_4_value}
+</td>
+{END Grade_4_fieldcolumn}
+	{BEGIN Grade_5_fieldcolumn}
+<td  class="runner-cc {$Grade_5_class}" {$Grade_5_style} {$recordattrs}>
+	{$Grade_5_value}
+</td>
+{END Grade_5_fieldcolumn}
+	{BEGIN Grade_6_fieldcolumn}
+<td  class="runner-cc {$Grade_6_class}" {$Grade_6_style} {$recordattrs}>
+	{$Grade_6_value}
+</td>
+{END Grade_6_fieldcolumn}
+	{BEGIN Grade_7_fieldcolumn}
+<td  class="runner-cc {$Grade_7_class}" {$Grade_7_style} {$recordattrs}>
+	{$Grade_7_value}
+</td>
+{END Grade_7_fieldcolumn}
+	{BEGIN Grade_8_fieldcolumn}
+<td  class="runner-cc {$Grade_8_class}" {$Grade_8_style} {$recordattrs}>
+	{$Grade_8_value}
+</td>
+{END Grade_8_fieldcolumn}
+	{BEGIN Grade_9_fieldcolumn}
+<td  class="runner-cc {$Grade_9_class}" {$Grade_9_style} {$recordattrs}>
+	{$Grade_9_value}
+</td>
+{END Grade_9_fieldcolumn}
+	{BEGIN Grade_10_fieldcolumn}
+<td  class="runner-cc {$Grade_10_class}" {$Grade_10_style} {$recordattrs}>
+	{$Grade_10_value}
+</td>
+{END Grade_10_fieldcolumn}
+	{BEGIN Grade_11_fieldcolumn}
+<td  class="runner-cc {$Grade_11_class}" {$Grade_11_style} {$recordattrs}>
+	{$Grade_11_value}
+</td>
+{END Grade_11_fieldcolumn}
+	{BEGIN Grade_12_fieldcolumn}
+<td  class="runner-cc {$Grade_12_class}" {$Grade_12_style} {$recordattrs}>
+	{$Grade_12_value}
+</td>
+{END Grade_12_fieldcolumn}
+	{BEGIN TOTAL_Students_fieldcolumn}
+<td  class="runner-cc {$TOTAL_Students_class}" {$TOTAL_Students_style} {$recordattrs}>
+	{$TOTAL_Students_value}
+</td>
+{END TOTAL_Students_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	{BEGIN totals_row}
+<tr class="rnr-bottomrow style1">
+	{BEGIN totals_record}
+		{BEGIN P__O__Box_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END P__O__Box_fieldfootercolumn}
+	{BEGIN Postal_code_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Postal_code_fieldfootercolumn}
+	{BEGIN Province_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Province_fieldfootercolumn}
+	{BEGIN school_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END school_id_fieldfootercolumn}
+	{BEGIN School_Name_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END School_Name_fieldfootercolumn}
+	{BEGIN Registration_Number_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Registration_Number_fieldfootercolumn}
+	{BEGIN Registration_Date_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Registration_Date_fieldfootercolumn}
+	{BEGIN School_Type_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END School_Type_fieldfootercolumn}
+	{BEGIN Latitude_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Latitude_fieldfootercolumn}
+	{BEGIN Longditude_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Longditude_fieldfootercolumn}
+	{BEGIN Administrator_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Administrator_fieldfootercolumn}
+	{BEGIN Principal_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Principal_fieldfootercolumn}
+	{BEGIN Address_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Address_fieldfootercolumn}
+	{BEGIN City_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END City_fieldfootercolumn}
+	{BEGIN Country_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Country_fieldfootercolumn}
+	{BEGIN E_mail_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END E_mail_fieldfootercolumn}
+	{BEGIN School_Phone_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END School_Phone_fieldfootercolumn}
+	{BEGIN Admnistrators_Phone_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Admnistrators_Phone_fieldfootercolumn}
+	{BEGIN Cresh_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Cresh_fieldfootercolumn}
+	{BEGIN Grade_R_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_R_fieldfootercolumn}
+	{BEGIN Grade_0_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_0_fieldfootercolumn}
+	{BEGIN Grade_1_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_1_fieldfootercolumn}
+	{BEGIN Grade_2_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_2_fieldfootercolumn}
+	{BEGIN Grade_3_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_3_fieldfootercolumn}
+	{BEGIN Grade_4_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_4_fieldfootercolumn}
+	{BEGIN Grade_5_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_5_fieldfootercolumn}
+	{BEGIN Grade_6_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_6_fieldfootercolumn}
+	{BEGIN Grade_7_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_7_fieldfootercolumn}
+	{BEGIN Grade_8_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_8_fieldfootercolumn}
+	{BEGIN Grade_9_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_9_fieldfootercolumn}
+	{BEGIN Grade_10_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_10_fieldfootercolumn}
+	{BEGIN Grade_11_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_11_fieldfootercolumn}
+	{BEGIN Grade_12_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END Grade_12_fieldfootercolumn}
+	{BEGIN TOTAL_Students_fieldfootercolumn}
+<td class="rnr-cc rnr-bc rnr-clast">
+	{BEGIN TOTAL_Students_showtotal}
+			Count:
+	{$TOTAL_Students_total}
+	{END TOTAL_Students_showtotal}
+</td>
+{END TOTAL_Students_fieldfootercolumn}
+
+	<td class="rnr-edge">&nbsp;</td>
+	{BEGIN endrecordtotals_block}
+	<td class="rnr-cs"></td>
+	{END endrecordtotals_block}
+	{END totals_record}
+</tr>
+{END totals_row}
+
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

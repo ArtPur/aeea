@@ -1,0 +1,1137 @@
+<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfo {$brickclass_masterinfo}">{$showmasterfile}
+<a class="runner-link" {$backtomasterlink_attrs}>
+	<b>Back to {$backtomasterlink_caption}</b>
+</a></div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+
+{BEGIN container_toplinks}
+<div class="rnr-c rnr-ch rnr-c-toplinks">
+<div class="rnr-hfiller"></div>
+{BEGIN security_block}
+<div  class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}"><div id="login_block{$id}">
+	{BEGIN loggedas_message} 
+	<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+	{END loggedas_message}
+	{BEGIN guestloginbutton}
+	<span>
+		<a href="#" class="rnr-button" {$guestloginlink_attrs}>Login</a>
+	</span>
+	{END guestloginbutton}
+	{BEGIN logoutbutton}
+	<a href="#" class="rnr-button" {$logoutlink_attrs}>Log out</a>
+	{END logoutbutton}
+
+	{BEGIN changepwd_link}
+	<a href="#" class="rnr-button" {$changepwdlink_attrs}>Change password</a>
+	{END changepwd_link}
+</div></div>
+{END security_block}
+
+
+
+</div>
+{END container_toplinks}
+
+
+
+{BEGIN container_hmenu}
+<div class="rnr-c rnr-ch rnr-c-hmenu">
+
+{BEGIN menu_block}
+{$menu main horizontal}{END menu_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_hmenu}
+
+
+
+{BEGIN container_recordcontrols}
+<div class="rnr-c rnr-ch rnr-c-recordcontrols">
+
+{BEGIN newrecord_controls_block}
+<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">		{BEGIN add_link}
+		<a href="school_add.php" class="rnr-button" {$addlink_attrs}>Add new</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<a href="#" class="rnr-button" {$inlineaddlink_attrs}>Inline Add</a>
+	{END inlineadd_link}
+
+
+</div>
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}
+<span class="rnr-buttons-group">
+<a class="rnr-button {$withSelectedClass}" href="#" id="selectButtonsToggler{$id}">With selected...</a>
+<ul class="rnr-list" id="selectButtonsGroup{$id}">
+
+		{BEGIN editselected_link}
+<li>
+		<a href="#" class="rnr-button link" {$editselectedlink_attrs} {$editselectedlink_span}>Edit</a>
+</li>
+	{END editselected_link}
+
+		{BEGIN deleteselected_link}
+<li>
+		<a href="#" class="rnr-button link" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Delete</a>
+</li>
+	{END deleteselected_link}
+
+		{BEGIN exportselected_link}
+<li>
+		<a href="#" class="rnr-button link" {$exportselectedlink_attrs} {$exportselectedlink_span}>Export</a>
+</li>
+	{END exportselected_link}
+
+		{BEGIN printselected_link}
+<li>
+		<a href="#" class="rnr-button link" {$printselectedlink_attrs} {$printselectedlink_span}>Print</a>
+</li>
+	{END printselected_link}
+</ul>
+</span>
+{END widhtSelected}
+		{BEGIN saveall_link}
+		<a href="#" class="rnr-button" {$savealllink_attrs} {$savealllink_span}>Save all</a>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<a href="#" class="rnr-button" {$cancelalllink_attrs} {$cancelalllink_span}>Cancel</a>
+	{END cancelall_link}
+</div>
+{END record_controls_block}
+
+
+{BEGIN more_list}
+<div  class="style1 rnr-bl rnr-b-toplinks {$brickclass_toplinks}"><span class="rnr-buttons-group">
+{BEGIN moreButtons}
+<a class="rnr-button" id="extraButtonsToggler{$id}" href="#">More...</a>
+<ul class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
+{BEGIN print_link}
+<li>
+	<a target="_blank" href="school_print.php?{$crosstable_attrs}" class="rnr-button link" {$printlink_attrs}>Print this page</a>
+</li>
+{END print_link}
+{BEGIN printall_link}
+<li>
+	<a target="_blank" href="school_print.php?all=1&amp;{$crosstable_attrs}" class="rnr-button link" {$printalllink_attrs}>Print all pages</a>
+</li>
+{END printall_link}
+
+{BEGIN asearch_link}
+<li>
+	<a href="school_search.php" class="rnr-button link" {$advsearchlink_attrs}>Advanced search</a>
+</li>
+{END asearch_link}
+
+{BEGIN export_link}
+<li>
+	<a target="_blank" href="school_export.php" class="rnr-button link" {$exportlink_attrs}>Export results</a>
+</li>
+{END export_link}
+
+{BEGIN import_link}
+<li>
+	<a href="school_import.php?{$crosstable_attrs}" class="rnr-button link" {$importlink_attrs}>Import</a>
+</li>
+{END import_link}
+</ul>
+{END moreButtons}
+</span></div>
+{END more_list}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_recordcontrols}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+
+{BEGIN container_left}
+<div class="rnr-c rnr-cv rnr-c-left">
+
+{BEGIN searchform_block}
+<div  class="rnr-brickcontents style2 rnr-b-vsearch1 {$brickclass_vsearch1}">	Search for:
+	{BEGIN searchPanelTopButtons}	
+	<span>
+	<a href="#" class="rnr-button img" id="showSrchWin{$id}"  data-icon="panelfloat" {$showHideSearchWin_attrs}></a>
+	&nbsp;		
+	<a href="#" class="rnr-button img" id="showOptPanel{$id}" data-icon="paneldown" {$showHideSearchPanel_attrs}></a>
+	</span>
+	{END searchPanelTopButtons}
+</div>{END searchform_block}
+
+
+{BEGIN searchform_block}
+<div  class="rnr-brickcontents style1 rnr-b-vsearch2 {$brickclass_vsearch2}"><div>
+	<span>
+		{BEGIN searchform_text}
+		<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+			<a href="#" class="rnr-button img" data-icon="search" {$searchbutton_attrs}></a>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}
+			<a class="rnr-button" href="#" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</a>
+		{END searchform_showall}
+	</span>	
+</div></div>{END searchform_block}
+
+
+{BEGIN searchsaving_block}
+<div  class="rnr-brickcontents style1 rnr-b-search_saving_buttons {$brickclass_search_saving_buttons}"></div>{END searchsaving_block}
+
+
+{BEGIN searchPanel}
+<div  class="rnr-brickcontents style1 rnr-b-searchpanel {$brickclass_searchpanel}"><div class="searchPanelContainer">
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType{$id}" class="rnr-radio-button" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<span>all</span>{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType{$id}" class="rnr-radio-button" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<span>any</span>{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="rnr-buttons-group">
+			<a href="#" id="showHideControlChooseMenu{$id}" class="rnr-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		
+		<a href="#" id="showHideSearchType{$id}" class="rnr-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+	</div>
+	
+
+	<table class="controlsBlock {$controls_block_class}">
+				{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>	
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="rnr-searchtype">{$searchtype}</div>
+				<div class="rnr-searchcontrol">{$searchcontrol}</div>
+				<div class="rnr-searchcontrol">{$searchcontrol1}</div>
+			</td>	
+		</tr>
+		{END searchCtrlBlock}
+	</table>	
+
+
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<a href="#" class="rnr-button" id="searchButton{$id}" {$searchbutton_attrs}>Search</a>
+	</div>
+</div>
+
+</div></div>{END searchPanel}
+
+
+
+{BEGIN details_block}
+<div  class="rnr-brickcontents style2 rnr-b-vdetails_found {$brickclass_vdetails_found}"><span  {$details_attrs}>Details found: <span class="rnr-details_found_count">{$records_found}</span></span>
+</div>{END details_block}
+
+
+{BEGIN pages_block}
+<div  class="rnr-brickcontents style1 rnr-b-vpage_of {$brickclass_vpage_of}"><span id="pages_block{$id}">
+	<span {$pages_attrs}>Page {$page} of {$maxpages}</span>
+</span>
+</div>{END pages_block}
+
+
+{BEGIN recordspp_block}
+<div  class="rnr-brickcontents style1 rnr-b-vrecsperpage {$brickclass_vrecsperpage}"><span id="recordspp_block{$id}" name="recordspp_block{$id}">
+	Records Per Page:&nbsp;{$recsPerPage}
+</span>
+</div>{END recordspp_block}
+
+
+</div>
+{END container_left}
+
+
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_message}
+<div class="rnr-c rnr-ch rnr-c-message">
+
+{BEGIN message_block}
+<div  class="style1 rnr-bc rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>
+{END message_block}
+
+
+</div>
+{END container_message}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+						<table class="rnr-c rnr-cont rnr-c-grid rnr-b-grid rnr-gridtable  hoverable " cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="rnr-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="rnr-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																																			{BEGIN school_id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$school_id_class}">
+									{BEGIN school_id_fieldheader}
+																				<span {$school_id_orderlinkattrs}>
+											{$label school school_id}
+										</span>
+									{END school_id_fieldheader}
+									</th>
+									{END school_id_fieldheadercolumn}
+
+																	{BEGIN Postal_code_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Postal_code_class}">
+									{BEGIN Postal_code_fieldheader}
+																				<span {$Postal_code_orderlinkattrs}>
+											{$label school Postal_code}
+										</span>
+									{END Postal_code_fieldheader}
+									</th>
+									{END Postal_code_fieldheadercolumn}
+
+																	{BEGIN P__O__Box_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$P__O__Box_class}">
+									{BEGIN P__O__Box_fieldheader}
+																				<span {$P__O__Box_orderlinkattrs}>
+											{$label school P__O__Box}
+										</span>
+									{END P__O__Box_fieldheader}
+									</th>
+									{END P__O__Box_fieldheadercolumn}
+
+																	{BEGIN Province_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Province_class}">
+									{BEGIN Province_fieldheader}
+																				<span {$Province_orderlinkattrs}>
+											{$label school Province}
+										</span>
+									{END Province_fieldheader}
+									</th>
+									{END Province_fieldheadercolumn}
+
+																	{BEGIN School_Name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$School_Name_class}">
+									{BEGIN School_Name_fieldheader}
+																				<span {$School_Name_orderlinkattrs}>
+											{$label school School_Name}
+										</span>
+									{END School_Name_fieldheader}
+									</th>
+									{END School_Name_fieldheadercolumn}
+
+																	{BEGIN Registration_Number_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Registration_Number_class}">
+									{BEGIN Registration_Number_fieldheader}
+																				<span {$Registration_Number_orderlinkattrs}>
+											{$label school Registration_Number}
+										</span>
+									{END Registration_Number_fieldheader}
+									</th>
+									{END Registration_Number_fieldheadercolumn}
+
+																	{BEGIN Registration_Date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Registration_Date_class}">
+									{BEGIN Registration_Date_fieldheader}
+																				<span {$Registration_Date_orderlinkattrs}>
+											{$label school Registration_Date}
+										</span>
+									{END Registration_Date_fieldheader}
+									</th>
+									{END Registration_Date_fieldheadercolumn}
+
+																	{BEGIN School_Type_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$School_Type_class}">
+									{BEGIN School_Type_fieldheader}
+																				<span {$School_Type_orderlinkattrs}>
+											{$label school School_Type}
+										</span>
+									{END School_Type_fieldheader}
+									</th>
+									{END School_Type_fieldheadercolumn}
+
+																	{BEGIN Latitude_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Latitude_class}">
+									{BEGIN Latitude_fieldheader}
+																				<span {$Latitude_orderlinkattrs}>
+											{$label school Latitude}
+										</span>
+									{END Latitude_fieldheader}
+									</th>
+									{END Latitude_fieldheadercolumn}
+
+																	{BEGIN Longditude_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Longditude_class}">
+									{BEGIN Longditude_fieldheader}
+																				<span {$Longditude_orderlinkattrs}>
+											{$label school Longditude}
+										</span>
+									{END Longditude_fieldheader}
+									</th>
+									{END Longditude_fieldheadercolumn}
+
+																	{BEGIN Administrator_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Administrator_class}">
+									{BEGIN Administrator_fieldheader}
+																				<span {$Administrator_orderlinkattrs}>
+											{$label school Administrator}
+										</span>
+									{END Administrator_fieldheader}
+									</th>
+									{END Administrator_fieldheadercolumn}
+
+																	{BEGIN Principal_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Principal_class}">
+									{BEGIN Principal_fieldheader}
+																				<span {$Principal_orderlinkattrs}>
+											{$label school Principal}
+										</span>
+									{END Principal_fieldheader}
+									</th>
+									{END Principal_fieldheadercolumn}
+
+																	{BEGIN Address_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Address_class}">
+									{BEGIN Address_fieldheader}
+																				<span {$Address_orderlinkattrs}>
+											{$label school Address}
+										</span>
+									{END Address_fieldheader}
+									</th>
+									{END Address_fieldheadercolumn}
+
+																	{BEGIN City_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$City_class}">
+									{BEGIN City_fieldheader}
+																				<span {$City_orderlinkattrs}>
+											{$label school City}
+										</span>
+									{END City_fieldheader}
+									</th>
+									{END City_fieldheadercolumn}
+
+																	{BEGIN Country_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Country_class}">
+									{BEGIN Country_fieldheader}
+																				<span {$Country_orderlinkattrs}>
+											{$label school Country}
+										</span>
+									{END Country_fieldheader}
+									</th>
+									{END Country_fieldheadercolumn}
+
+																	{BEGIN E_mail_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$E_mail_class}">
+									{BEGIN E_mail_fieldheader}
+																				<span {$E_mail_orderlinkattrs}>
+											{$label school E_mail}
+										</span>
+									{END E_mail_fieldheader}
+									</th>
+									{END E_mail_fieldheadercolumn}
+
+																	{BEGIN School_Phone_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$School_Phone_class}">
+									{BEGIN School_Phone_fieldheader}
+																				<span {$School_Phone_orderlinkattrs}>
+											{$label school School_Phone}
+										</span>
+									{END School_Phone_fieldheader}
+									</th>
+									{END School_Phone_fieldheadercolumn}
+
+																	{BEGIN Admnistrators_Phone_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Admnistrators_Phone_class}">
+									{BEGIN Admnistrators_Phone_fieldheader}
+																				<span {$Admnistrators_Phone_orderlinkattrs}>
+											{$label school Admnistrators_Phone}
+										</span>
+									{END Admnistrators_Phone_fieldheader}
+									</th>
+									{END Admnistrators_Phone_fieldheadercolumn}
+
+																	{BEGIN Cresh_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Cresh_class}">
+									{BEGIN Cresh_fieldheader}
+																				<span {$Cresh_orderlinkattrs}>
+											{$label school Cresh}
+										</span>
+									{END Cresh_fieldheader}
+									</th>
+									{END Cresh_fieldheadercolumn}
+
+																	{BEGIN Grade_R_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_R_class}">
+									{BEGIN Grade_R_fieldheader}
+																				<span {$Grade_R_orderlinkattrs}>
+											{$label school Grade_R}
+										</span>
+									{END Grade_R_fieldheader}
+									</th>
+									{END Grade_R_fieldheadercolumn}
+
+																	{BEGIN Grade_0_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_0_class}">
+									{BEGIN Grade_0_fieldheader}
+																				<span {$Grade_0_orderlinkattrs}>
+											{$label school Grade_0}
+										</span>
+									{END Grade_0_fieldheader}
+									</th>
+									{END Grade_0_fieldheadercolumn}
+
+																	{BEGIN Grade_1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_1_class}">
+									{BEGIN Grade_1_fieldheader}
+																				<span {$Grade_1_orderlinkattrs}>
+											{$label school Grade_1}
+										</span>
+									{END Grade_1_fieldheader}
+									</th>
+									{END Grade_1_fieldheadercolumn}
+
+																	{BEGIN Grade_2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_2_class}">
+									{BEGIN Grade_2_fieldheader}
+																				<span {$Grade_2_orderlinkattrs}>
+											{$label school Grade_2}
+										</span>
+									{END Grade_2_fieldheader}
+									</th>
+									{END Grade_2_fieldheadercolumn}
+
+																	{BEGIN Grade_3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_3_class}">
+									{BEGIN Grade_3_fieldheader}
+																				<span {$Grade_3_orderlinkattrs}>
+											{$label school Grade_3}
+										</span>
+									{END Grade_3_fieldheader}
+									</th>
+									{END Grade_3_fieldheadercolumn}
+
+																	{BEGIN Grade_4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_4_class}">
+									{BEGIN Grade_4_fieldheader}
+																				<span {$Grade_4_orderlinkattrs}>
+											{$label school Grade_4}
+										</span>
+									{END Grade_4_fieldheader}
+									</th>
+									{END Grade_4_fieldheadercolumn}
+
+																	{BEGIN Grade_5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_5_class}">
+									{BEGIN Grade_5_fieldheader}
+																				<span {$Grade_5_orderlinkattrs}>
+											{$label school Grade_5}
+										</span>
+									{END Grade_5_fieldheader}
+									</th>
+									{END Grade_5_fieldheadercolumn}
+
+																	{BEGIN Grade_6_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_6_class}">
+									{BEGIN Grade_6_fieldheader}
+																				<span {$Grade_6_orderlinkattrs}>
+											{$label school Grade_6}
+										</span>
+									{END Grade_6_fieldheader}
+									</th>
+									{END Grade_6_fieldheadercolumn}
+
+																	{BEGIN Grade_7_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_7_class}">
+									{BEGIN Grade_7_fieldheader}
+																				<span {$Grade_7_orderlinkattrs}>
+											{$label school Grade_7}
+										</span>
+									{END Grade_7_fieldheader}
+									</th>
+									{END Grade_7_fieldheadercolumn}
+
+																	{BEGIN Grade_8_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_8_class}">
+									{BEGIN Grade_8_fieldheader}
+																				<span {$Grade_8_orderlinkattrs}>
+											{$label school Grade_8}
+										</span>
+									{END Grade_8_fieldheader}
+									</th>
+									{END Grade_8_fieldheadercolumn}
+
+																	{BEGIN Grade_9_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_9_class}">
+									{BEGIN Grade_9_fieldheader}
+																				<span {$Grade_9_orderlinkattrs}>
+											{$label school Grade_9}
+										</span>
+									{END Grade_9_fieldheader}
+									</th>
+									{END Grade_9_fieldheadercolumn}
+
+																	{BEGIN Grade_10_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_10_class}">
+									{BEGIN Grade_10_fieldheader}
+																				<span {$Grade_10_orderlinkattrs}>
+											{$label school Grade_10}
+										</span>
+									{END Grade_10_fieldheader}
+									</th>
+									{END Grade_10_fieldheadercolumn}
+
+																	{BEGIN Grade_11_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_11_class}">
+									{BEGIN Grade_11_fieldheader}
+																				<span {$Grade_11_orderlinkattrs}>
+											{$label school Grade_11}
+										</span>
+									{END Grade_11_fieldheader}
+									</th>
+									{END Grade_11_fieldheadercolumn}
+
+																	{BEGIN Grade_12_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Grade_12_class}">
+									{BEGIN Grade_12_fieldheader}
+																				<span {$Grade_12_orderlinkattrs}>
+											{$label school Grade_12}
+										</span>
+									{END Grade_12_fieldheader}
+									</th>
+									{END Grade_12_fieldheadercolumn}
+
+																	{BEGIN TOTAL_Students_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TOTAL_Students_class}">
+									{BEGIN TOTAL_Students_fieldheader}
+																				<span {$TOTAL_Students_orderlinkattrs}>
+											{$label school TOTAL_Students}
+										</span>
+									{END TOTAL_Students_fieldheader}
+									</th>
+									{END TOTAL_Students_fieldheadercolumn}
+
+
+									
+									<th class="rnr-edge">&nbsp;</th>
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									{BEGIN listIcons_column}
+									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
+																		{BEGIN edit_column}
+									{BEGIN edit_link}
+																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
+																		{BEGIN inlineedit_column}
+									{BEGIN inlineedit_link}
+																			<a class="rnr-button-img" {$inlineeditlink_attrs} data-icon="inlineedit" title="Inline Edit"></a>
+									{END inlineedit_link}
+									{END inlineedit_column}
+
+									
+																		{BEGIN view_column}
+									{BEGIN view_link}
+																			<a class="rnr-button-img" {$viewlink_attrs} data-icon="view" title="View"></a>
+									{END view_link}
+									{END view_column}
+									</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="rnr-bc" iEditCont="checkBox" {$rowstyle} {$recordattrs}>
+									{BEGIN checkbox}
+									<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN school_id_fieldcolumn}
+	<td class="{$school_id_class}" {$school_id_style} {$recordattrs}>
+		{$school_id_value}
+	</td>
+{END school_id_fieldcolumn}
+
+	{BEGIN Postal_code_fieldcolumn}
+	<td class="{$Postal_code_class}" {$Postal_code_style} {$recordattrs}>
+		{$Postal_code_value}
+	</td>
+{END Postal_code_fieldcolumn}
+
+	{BEGIN P__O__Box_fieldcolumn}
+	<td class="{$P__O__Box_class}" {$P__O__Box_style} {$recordattrs}>
+		{$P__O__Box_value}
+	</td>
+{END P__O__Box_fieldcolumn}
+
+	{BEGIN Province_fieldcolumn}
+	<td class="{$Province_class}" {$Province_style} {$recordattrs}>
+		{$Province_value}
+	</td>
+{END Province_fieldcolumn}
+
+	{BEGIN School_Name_fieldcolumn}
+	<td class="{$School_Name_class}" {$School_Name_style} {$recordattrs}>
+		{$School_Name_value}
+	</td>
+{END School_Name_fieldcolumn}
+
+	{BEGIN Registration_Number_fieldcolumn}
+	<td class="{$Registration_Number_class}" {$Registration_Number_style} {$recordattrs}>
+		{$Registration_Number_value}
+	</td>
+{END Registration_Number_fieldcolumn}
+
+	{BEGIN Registration_Date_fieldcolumn}
+	<td class="{$Registration_Date_class}" {$Registration_Date_style} {$recordattrs}>
+		{$Registration_Date_value}
+	</td>
+{END Registration_Date_fieldcolumn}
+
+	{BEGIN School_Type_fieldcolumn}
+	<td class="{$School_Type_class}" {$School_Type_style} {$recordattrs}>
+		{$School_Type_value}
+	</td>
+{END School_Type_fieldcolumn}
+
+	{BEGIN Latitude_fieldcolumn}
+	<td class="{$Latitude_class}" {$Latitude_style} {$recordattrs}>
+		{$Latitude_value}
+	</td>
+{END Latitude_fieldcolumn}
+
+	{BEGIN Longditude_fieldcolumn}
+	<td class="{$Longditude_class}" {$Longditude_style} {$recordattrs}>
+		{$Longditude_value}
+	</td>
+{END Longditude_fieldcolumn}
+
+	{BEGIN Administrator_fieldcolumn}
+	<td class="{$Administrator_class}" {$Administrator_style} {$recordattrs}>
+		{$Administrator_value}
+	</td>
+{END Administrator_fieldcolumn}
+
+	{BEGIN Principal_fieldcolumn}
+	<td class="{$Principal_class}" {$Principal_style} {$recordattrs}>
+		{$Principal_value}
+	</td>
+{END Principal_fieldcolumn}
+
+	{BEGIN Address_fieldcolumn}
+	<td class="{$Address_class}" {$Address_style} {$recordattrs}>
+		{$Address_value}
+	</td>
+{END Address_fieldcolumn}
+
+	{BEGIN City_fieldcolumn}
+	<td class="{$City_class}" {$City_style} {$recordattrs}>
+		{$City_value}
+	</td>
+{END City_fieldcolumn}
+
+	{BEGIN Country_fieldcolumn}
+	<td class="{$Country_class}" {$Country_style} {$recordattrs}>
+		{$Country_value}
+	</td>
+{END Country_fieldcolumn}
+
+	{BEGIN E_mail_fieldcolumn}
+	<td class="{$E_mail_class}" {$E_mail_style} {$recordattrs}>
+		{$E_mail_value}
+	</td>
+{END E_mail_fieldcolumn}
+
+	{BEGIN School_Phone_fieldcolumn}
+	<td class="{$School_Phone_class}" {$School_Phone_style} {$recordattrs}>
+		{$School_Phone_value}
+	</td>
+{END School_Phone_fieldcolumn}
+
+	{BEGIN Admnistrators_Phone_fieldcolumn}
+	<td class="{$Admnistrators_Phone_class}" {$Admnistrators_Phone_style} {$recordattrs}>
+		{$Admnistrators_Phone_value}
+	</td>
+{END Admnistrators_Phone_fieldcolumn}
+
+	{BEGIN Cresh_fieldcolumn}
+	<td class="{$Cresh_class}" {$Cresh_style} {$recordattrs}>
+		{$Cresh_value}
+	</td>
+{END Cresh_fieldcolumn}
+
+	{BEGIN Grade_R_fieldcolumn}
+	<td class="{$Grade_R_class}" {$Grade_R_style} {$recordattrs}>
+		{$Grade_R_value}
+	</td>
+{END Grade_R_fieldcolumn}
+
+	{BEGIN Grade_0_fieldcolumn}
+	<td class="{$Grade_0_class}" {$Grade_0_style} {$recordattrs}>
+		{$Grade_0_value}
+	</td>
+{END Grade_0_fieldcolumn}
+
+	{BEGIN Grade_1_fieldcolumn}
+	<td class="{$Grade_1_class}" {$Grade_1_style} {$recordattrs}>
+		{$Grade_1_value}
+	</td>
+{END Grade_1_fieldcolumn}
+
+	{BEGIN Grade_2_fieldcolumn}
+	<td class="{$Grade_2_class}" {$Grade_2_style} {$recordattrs}>
+		{$Grade_2_value}
+	</td>
+{END Grade_2_fieldcolumn}
+
+	{BEGIN Grade_3_fieldcolumn}
+	<td class="{$Grade_3_class}" {$Grade_3_style} {$recordattrs}>
+		{$Grade_3_value}
+	</td>
+{END Grade_3_fieldcolumn}
+
+	{BEGIN Grade_4_fieldcolumn}
+	<td class="{$Grade_4_class}" {$Grade_4_style} {$recordattrs}>
+		{$Grade_4_value}
+	</td>
+{END Grade_4_fieldcolumn}
+
+	{BEGIN Grade_5_fieldcolumn}
+	<td class="{$Grade_5_class}" {$Grade_5_style} {$recordattrs}>
+		{$Grade_5_value}
+	</td>
+{END Grade_5_fieldcolumn}
+
+	{BEGIN Grade_6_fieldcolumn}
+	<td class="{$Grade_6_class}" {$Grade_6_style} {$recordattrs}>
+		{$Grade_6_value}
+	</td>
+{END Grade_6_fieldcolumn}
+
+	{BEGIN Grade_7_fieldcolumn}
+	<td class="{$Grade_7_class}" {$Grade_7_style} {$recordattrs}>
+		{$Grade_7_value}
+	</td>
+{END Grade_7_fieldcolumn}
+
+	{BEGIN Grade_8_fieldcolumn}
+	<td class="{$Grade_8_class}" {$Grade_8_style} {$recordattrs}>
+		{$Grade_8_value}
+	</td>
+{END Grade_8_fieldcolumn}
+
+	{BEGIN Grade_9_fieldcolumn}
+	<td class="{$Grade_9_class}" {$Grade_9_style} {$recordattrs}>
+		{$Grade_9_value}
+	</td>
+{END Grade_9_fieldcolumn}
+
+	{BEGIN Grade_10_fieldcolumn}
+	<td class="{$Grade_10_class}" {$Grade_10_style} {$recordattrs}>
+		{$Grade_10_value}
+	</td>
+{END Grade_10_fieldcolumn}
+
+	{BEGIN Grade_11_fieldcolumn}
+	<td class="{$Grade_11_class}" {$Grade_11_style} {$recordattrs}>
+		{$Grade_11_value}
+	</td>
+{END Grade_11_fieldcolumn}
+
+	{BEGIN Grade_12_fieldcolumn}
+	<td class="{$Grade_12_class}" {$Grade_12_style} {$recordattrs}>
+		{$Grade_12_value}
+	</td>
+{END Grade_12_fieldcolumn}
+
+	{BEGIN TOTAL_Students_fieldcolumn}
+	<td class="{$TOTAL_Students_class}" {$TOTAL_Students_style} {$recordattrs}>
+		{$TOTAL_Students_value}
+	</td>
+{END TOTAL_Students_fieldcolumn}
+
+
+									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+									{BEGIN endrecord_block}
+									<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+																							{BEGIN totals_row}
+								<tr class="rnr-bottomrow style1 {$gridFooter_class}">
+									{BEGIN totals_record}
+									{BEGIN listIcons_column}
+									<td class="rnr-cc"></td>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="rnr-cc"></td>
+									{END checkbox_column}
+
+									
+										{BEGIN school_id_fieldfootercolumn}
+<td class="{$school_id_class}">
+</td>
+{END school_id_fieldfootercolumn}
+	{BEGIN Postal_code_fieldfootercolumn}
+<td class="{$Postal_code_class}">
+</td>
+{END Postal_code_fieldfootercolumn}
+	{BEGIN P__O__Box_fieldfootercolumn}
+<td class="{$P__O__Box_class}">
+</td>
+{END P__O__Box_fieldfootercolumn}
+	{BEGIN Province_fieldfootercolumn}
+<td class="{$Province_class}">
+</td>
+{END Province_fieldfootercolumn}
+	{BEGIN School_Name_fieldfootercolumn}
+<td class="{$School_Name_class}">
+</td>
+{END School_Name_fieldfootercolumn}
+	{BEGIN Registration_Number_fieldfootercolumn}
+<td class="{$Registration_Number_class}">
+</td>
+{END Registration_Number_fieldfootercolumn}
+	{BEGIN Registration_Date_fieldfootercolumn}
+<td class="{$Registration_Date_class}">
+</td>
+{END Registration_Date_fieldfootercolumn}
+	{BEGIN School_Type_fieldfootercolumn}
+<td class="{$School_Type_class}">
+</td>
+{END School_Type_fieldfootercolumn}
+	{BEGIN Latitude_fieldfootercolumn}
+<td class="{$Latitude_class}">
+</td>
+{END Latitude_fieldfootercolumn}
+	{BEGIN Longditude_fieldfootercolumn}
+<td class="{$Longditude_class}">
+</td>
+{END Longditude_fieldfootercolumn}
+	{BEGIN Administrator_fieldfootercolumn}
+<td class="{$Administrator_class}">
+</td>
+{END Administrator_fieldfootercolumn}
+	{BEGIN Principal_fieldfootercolumn}
+<td class="{$Principal_class}">
+</td>
+{END Principal_fieldfootercolumn}
+	{BEGIN Address_fieldfootercolumn}
+<td class="{$Address_class}">
+</td>
+{END Address_fieldfootercolumn}
+	{BEGIN City_fieldfootercolumn}
+<td class="{$City_class}">
+</td>
+{END City_fieldfootercolumn}
+	{BEGIN Country_fieldfootercolumn}
+<td class="{$Country_class}">
+</td>
+{END Country_fieldfootercolumn}
+	{BEGIN E_mail_fieldfootercolumn}
+<td class="{$E_mail_class}">
+</td>
+{END E_mail_fieldfootercolumn}
+	{BEGIN School_Phone_fieldfootercolumn}
+<td class="{$School_Phone_class}">
+</td>
+{END School_Phone_fieldfootercolumn}
+	{BEGIN Admnistrators_Phone_fieldfootercolumn}
+<td class="{$Admnistrators_Phone_class}">
+</td>
+{END Admnistrators_Phone_fieldfootercolumn}
+	{BEGIN Cresh_fieldfootercolumn}
+<td class="{$Cresh_class}">
+</td>
+{END Cresh_fieldfootercolumn}
+	{BEGIN Grade_R_fieldfootercolumn}
+<td class="{$Grade_R_class}">
+</td>
+{END Grade_R_fieldfootercolumn}
+	{BEGIN Grade_0_fieldfootercolumn}
+<td class="{$Grade_0_class}">
+</td>
+{END Grade_0_fieldfootercolumn}
+	{BEGIN Grade_1_fieldfootercolumn}
+<td class="{$Grade_1_class}">
+</td>
+{END Grade_1_fieldfootercolumn}
+	{BEGIN Grade_2_fieldfootercolumn}
+<td class="{$Grade_2_class}">
+</td>
+{END Grade_2_fieldfootercolumn}
+	{BEGIN Grade_3_fieldfootercolumn}
+<td class="{$Grade_3_class}">
+</td>
+{END Grade_3_fieldfootercolumn}
+	{BEGIN Grade_4_fieldfootercolumn}
+<td class="{$Grade_4_class}">
+</td>
+{END Grade_4_fieldfootercolumn}
+	{BEGIN Grade_5_fieldfootercolumn}
+<td class="{$Grade_5_class}">
+</td>
+{END Grade_5_fieldfootercolumn}
+	{BEGIN Grade_6_fieldfootercolumn}
+<td class="{$Grade_6_class}">
+</td>
+{END Grade_6_fieldfootercolumn}
+	{BEGIN Grade_7_fieldfootercolumn}
+<td class="{$Grade_7_class}">
+</td>
+{END Grade_7_fieldfootercolumn}
+	{BEGIN Grade_8_fieldfootercolumn}
+<td class="{$Grade_8_class}">
+</td>
+{END Grade_8_fieldfootercolumn}
+	{BEGIN Grade_9_fieldfootercolumn}
+<td class="{$Grade_9_class}">
+</td>
+{END Grade_9_fieldfootercolumn}
+	{BEGIN Grade_10_fieldfootercolumn}
+<td class="{$Grade_10_class}">
+</td>
+{END Grade_10_fieldfootercolumn}
+	{BEGIN Grade_11_fieldfootercolumn}
+<td class="{$Grade_11_class}">
+</td>
+{END Grade_11_fieldfootercolumn}
+	{BEGIN Grade_12_fieldfootercolumn}
+<td class="{$Grade_12_class}">
+</td>
+{END Grade_12_fieldfootercolumn}
+	{BEGIN TOTAL_Students_fieldfootercolumn}
+<td class="{$TOTAL_Students_class}">
+	{BEGIN TOTAL_Students_showtotal}
+			Count:
+	{$TOTAL_Students_total}
+	{END TOTAL_Students_showtotal}
+</td>
+{END TOTAL_Students_fieldfootercolumn}
+
+									<td class="rnr-edge">&nbsp;</td>
+									{BEGIN endrecordtotals_block}
+									<td class="rnr-cs"></td>
+									{END endrecordtotals_block}
+									{END totals_record}
+								</tr>
+								{END totals_row}
+
+						</tbody>
+					</table>
+					
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<div class="rnr-c rnr-ch rnr-c-pagination">
+
+{BEGIN pagination_block}
+<div  class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">{$pagination}</div>
+{END pagination_block}
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

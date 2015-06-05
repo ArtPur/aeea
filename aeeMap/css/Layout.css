@@ -1,0 +1,139 @@
+#Holder {
+	width:99%;
+	height:740px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	margin-bottom:20px;
+	background: #FFFFFF;		
+}
+
+#content {
+	height:auto;
+  	width: 100%;
+  	margin: 0 auto;/* center the page in Firefox */
+  	text-align: left;
+	padding: 20px;
+}
+/** Top menu **/
+#cssMenu {
+	margin: 0;
+	padding: 0;
+	height:50px;
+	background-color:#2A4B59;
+	z-index:9999;
+} 
+/** Logo **/
+#Header {
+	height:95px;
+	background-image:url(../images/Afrizone.png);
+	background-repeat:no-repeat;
+	margin-left:30px;		
+}
+/** nav bar **/
+#container {
+  	margin:0;
+	padding:0;
+	height:50px;
+	line-height: 1;
+  	border-radius: 5px 5px 0 0;
+  	-moz-border-radius: 5px 5px 0 0;
+  	-webkit-border-radius: 5px 5px 0 0;
+	background: #141414;
+  	background: -moz-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #246875), color-stop(100%, #2A4B59));
+  	background: -webkit-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: -o-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: -ms-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: linear-gradient(to bottom, #246875 0%, #2A4B59 100%);
+  	border-bottom: 3px solid #13BDCA;
+  	width: 100%;
+}
+
+#IndexPage {
+	border-style:none;
+	width:100%;
+	height:100%;
+	clear:both;
+	overflow:hidden;	
+}
+
+#IndexPage_Left {	
+	border-style:none;
+	width:40%;	
+	float:left;
+	padding:0px;
+	color:#2A4B59;
+}
+
+#IndexPage_Left_top {
+	border-style:none;	
+	width:90%;
+	height:20%;
+	float:left;
+	padding:20px;	
+}
+
+#IndexPage_Left_bottom {
+	border-style:none;	
+	width:90%;
+	height:80%;
+	float:left;
+	padding:20px;	
+}
+
+#IndexPage_Right {	
+	border-style:none;
+	padding:20px;
+	width:55%;
+	float:Right;
+	padding-right:10px;	
+	overflow:hidden;
+}
+
+#Pages {
+	/*height:auto;*/
+	height: 100%;
+	overflow: hidden;	
+}
+
+/*Footer section*/
+#Spacer	{
+	height:30px;
+	background-color:#13BDCA;
+}
+
+#Footer {
+	height:150px;
+	background: #141414;
+  	background: -moz-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #246875), color-stop(100%, #2A4B59));
+  	background: -webkit-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: -o-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: -ms-linear-gradient(top, #246875 0%, #2A4B59 100%);
+  	background: linear-gradient(to bottom, #246875 0%, #2A4B59 100%);
+  	padding: 20px;
+}
+#FooterLeft {
+	width:50%;
+	float:left;
+}
+#FooterRight {
+	width:50%;
+	float:Right;
+}
+#ContactHeading {
+	height:auto;
+	padding:0px;
+}	
+#ContactLeft {
+	width:240px;
+	float:left;
+	padding-left:10px;
+}
+#ContactRight {
+	width:240px;
+	float:left;
+}
+
+

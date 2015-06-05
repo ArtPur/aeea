@@ -1,0 +1,453 @@
+<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel School_Report search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_Representative}">
+	{BEGIN Representative_fieldblock}		
+	<td>
+		{$label School_Report Representative}
+	</td>
+	<td>
+		<input type="checkbox" {$Representative_notbox}>
+	</td>
+	<td>
+		{$searchtype_Representative}
+	</td>
+	<td>
+		{$Representative_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Representative_editcontrol1}&nbsp;
+	</td>
+{END Representative_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_School_Name}">
+	{BEGIN School_Name_fieldblock}		
+	<td>
+		{$label School_Report School_Name}
+	</td>
+	<td>
+		<input type="checkbox" {$School_Name_notbox}>
+	</td>
+	<td>
+		{$searchtype_School_Name}
+	</td>
+	<td>
+		{$School_Name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$School_Name_editcontrol1}&nbsp;
+	</td>
+{END School_Name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Registration_Number}">
+	{BEGIN Registration_Number_fieldblock}		
+	<td>
+		{$label School_Report Registration_Number}
+	</td>
+	<td>
+		<input type="checkbox" {$Registration_Number_notbox}>
+	</td>
+	<td>
+		{$searchtype_Registration_Number}
+	</td>
+	<td>
+		{$Registration_Number_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Registration_Number_editcontrol1}&nbsp;
+	</td>
+{END Registration_Number_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Registration_Date}">
+	{BEGIN Registration_Date_fieldblock}		
+	<td>
+		{$label School_Report Registration_Date}
+	</td>
+	<td>
+		<input type="checkbox" {$Registration_Date_notbox}>
+	</td>
+	<td>
+		{$searchtype_Registration_Date}
+	</td>
+	<td>
+		{$Registration_Date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Registration_Date_editcontrol1}&nbsp;
+	</td>
+{END Registration_Date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_School_Type}">
+	{BEGIN School_Type_fieldblock}		
+	<td>
+		{$label School_Report School_Type}
+	</td>
+	<td>
+		<input type="checkbox" {$School_Type_notbox}>
+	</td>
+	<td>
+		{$searchtype_School_Type}
+	</td>
+	<td>
+		{$School_Type_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$School_Type_editcontrol1}&nbsp;
+	</td>
+{END School_Type_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Administrator}">
+	{BEGIN Administrator_fieldblock}		
+	<td>
+		{$label School_Report Administrator}
+	</td>
+	<td>
+		<input type="checkbox" {$Administrator_notbox}>
+	</td>
+	<td>
+		{$searchtype_Administrator}
+	</td>
+	<td>
+		{$Administrator_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Administrator_editcontrol1}&nbsp;
+	</td>
+{END Administrator_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Principal}">
+	{BEGIN Principal_fieldblock}		
+	<td>
+		{$label School_Report Principal}
+	</td>
+	<td>
+		<input type="checkbox" {$Principal_notbox}>
+	</td>
+	<td>
+		{$searchtype_Principal}
+	</td>
+	<td>
+		{$Principal_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Principal_editcontrol1}&nbsp;
+	</td>
+{END Principal_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_P_O_Box}">
+	{BEGIN P_O_Box_fieldblock}		
+	<td>
+		{$label School_Report P_O_Box}
+	</td>
+	<td>
+		<input type="checkbox" {$P_O_Box_notbox}>
+	</td>
+	<td>
+		{$searchtype_P_O_Box}
+	</td>
+	<td>
+		{$P_O_Box_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$P_O_Box_editcontrol1}&nbsp;
+	</td>
+{END P_O_Box_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Address}">
+	{BEGIN Address_fieldblock}		
+	<td>
+		{$label School_Report Address}
+	</td>
+	<td>
+		<input type="checkbox" {$Address_notbox}>
+	</td>
+	<td>
+		{$searchtype_Address}
+	</td>
+	<td>
+		{$Address_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Address_editcontrol1}&nbsp;
+	</td>
+{END Address_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_City}">
+	{BEGIN City_fieldblock}		
+	<td>
+		{$label School_Report City}
+	</td>
+	<td>
+		<input type="checkbox" {$City_notbox}>
+	</td>
+	<td>
+		{$searchtype_City}
+	</td>
+	<td>
+		{$City_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$City_editcontrol1}&nbsp;
+	</td>
+{END City_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Country}">
+	{BEGIN Country_fieldblock}		
+	<td>
+		{$label School_Report Country}
+	</td>
+	<td>
+		<input type="checkbox" {$Country_notbox}>
+	</td>
+	<td>
+		{$searchtype_Country}
+	</td>
+	<td>
+		{$Country_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Country_editcontrol1}&nbsp;
+	</td>
+{END Country_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_E_mail}">
+	{BEGIN E_mail_fieldblock}		
+	<td>
+		{$label School_Report E_mail}
+	</td>
+	<td>
+		<input type="checkbox" {$E_mail_notbox}>
+	</td>
+	<td>
+		{$searchtype_E_mail}
+	</td>
+	<td>
+		{$E_mail_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$E_mail_editcontrol1}&nbsp;
+	</td>
+{END E_mail_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_School_Phone}">
+	{BEGIN School_Phone_fieldblock}		
+	<td>
+		{$label School_Report School_Phone}
+	</td>
+	<td>
+		<input type="checkbox" {$School_Phone_notbox}>
+	</td>
+	<td>
+		{$searchtype_School_Phone}
+	</td>
+	<td>
+		{$School_Phone_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$School_Phone_editcontrol1}&nbsp;
+	</td>
+{END School_Phone_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Administrator_Cell}">
+	{BEGIN Administrator_Cell_fieldblock}		
+	<td>
+		{$label School_Report Administrator_Cell}
+	</td>
+	<td>
+		<input type="checkbox" {$Administrator_Cell_notbox}>
+	</td>
+	<td>
+		{$searchtype_Administrator_Cell}
+	</td>
+	<td>
+		{$Administrator_Cell_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Administrator_Cell_editcontrol1}&nbsp;
+	</td>
+{END Administrator_Cell_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Total_Students}">
+	{BEGIN Total_Students_fieldblock}		
+	<td>
+		{$label School_Report Total_Students}
+	</td>
+	<td>
+		<input type="checkbox" {$Total_Students_notbox}>
+	</td>
+	<td>
+		{$searchtype_Total_Students}
+	</td>
+	<td>
+		{$Total_Students_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Total_Students_editcontrol1}&nbsp;
+	</td>
+{END Total_Students_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Longditude}">
+	{BEGIN Longditude_fieldblock}		
+	<td>
+		{$label School_Report Longditude}
+	</td>
+	<td>
+		<input type="checkbox" {$Longditude_notbox}>
+	</td>
+	<td>
+		{$searchtype_Longditude}
+	</td>
+	<td>
+		{$Longditude_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Longditude_editcontrol1}&nbsp;
+	</td>
+{END Longditude_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Latitude}">
+	{BEGIN Latitude_fieldblock}		
+	<td>
+		{$label School_Report Latitude}
+	</td>
+	<td>
+		<input type="checkbox" {$Latitude_notbox}>
+	</td>
+	<td>
+		{$searchtype_Latitude}
+	</td>
+	<td>
+		{$Latitude_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Latitude_editcontrol1}&nbsp;
+	</td>
+{END Latitude_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_province}">
+	{BEGIN province_fieldblock}		
+	<td>
+		{$label School_Report province}
+	</td>
+	<td>
+		<input type="checkbox" {$province_notbox}>
+	</td>
+	<td>
+		{$searchtype_province}
+	</td>
+	<td>
+		{$province_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$province_editcontrol1}&nbsp;
+	</td>
+{END province_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Postal_code}">
+	{BEGIN Postal_code_fieldblock}		
+	<td>
+		{$label School_Report Postal_code}
+	</td>
+	<td>
+		<input type="checkbox" {$Postal_code_notbox}>
+	</td>
+	<td>
+		{$searchtype_Postal_code}
+	</td>
+	<td>
+		{$Postal_code_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Postal_code_editcontrol1}&nbsp;
+	</td>
+{END Postal_code_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

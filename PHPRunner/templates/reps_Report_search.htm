@@ -1,0 +1,358 @@
+<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel reps_Report search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_Name}">
+	{BEGIN Name_fieldblock}		
+	<td>
+		{$label reps_Report Name}
+	</td>
+	<td>
+		<input type="checkbox" {$Name_notbox}>
+	</td>
+	<td>
+		{$searchtype_Name}
+	</td>
+	<td>
+		{$Name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Name_editcontrol1}&nbsp;
+	</td>
+{END Name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Surname}">
+	{BEGIN Surname_fieldblock}		
+	<td>
+		{$label reps_Report Surname}
+	</td>
+	<td>
+		<input type="checkbox" {$Surname_notbox}>
+	</td>
+	<td>
+		{$searchtype_Surname}
+	</td>
+	<td>
+		{$Surname_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Surname_editcontrol1}&nbsp;
+	</td>
+{END Surname_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Passport_Number}">
+	{BEGIN Passport_Number_fieldblock}		
+	<td>
+		{$label reps_Report Passport_Number}
+	</td>
+	<td>
+		<input type="checkbox" {$Passport_Number_notbox}>
+	</td>
+	<td>
+		{$searchtype_Passport_Number}
+	</td>
+	<td>
+		{$Passport_Number_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Passport_Number_editcontrol1}&nbsp;
+	</td>
+{END Passport_Number_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_P_O_Box}">
+	{BEGIN P_O_Box_fieldblock}		
+	<td>
+		{$label reps_Report P_O_Box}
+	</td>
+	<td>
+		<input type="checkbox" {$P_O_Box_notbox}>
+	</td>
+	<td>
+		{$searchtype_P_O_Box}
+	</td>
+	<td>
+		{$P_O_Box_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$P_O_Box_editcontrol1}&nbsp;
+	</td>
+{END P_O_Box_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Address}">
+	{BEGIN Address_fieldblock}		
+	<td>
+		{$label reps_Report Address}
+	</td>
+	<td>
+		<input type="checkbox" {$Address_notbox}>
+	</td>
+	<td>
+		{$searchtype_Address}
+	</td>
+	<td>
+		{$Address_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Address_editcontrol1}&nbsp;
+	</td>
+{END Address_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_City}">
+	{BEGIN City_fieldblock}		
+	<td>
+		{$label reps_Report City}
+	</td>
+	<td>
+		<input type="checkbox" {$City_notbox}>
+	</td>
+	<td>
+		{$searchtype_City}
+	</td>
+	<td>
+		{$City_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$City_editcontrol1}&nbsp;
+	</td>
+{END City_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Home_Phone}">
+	{BEGIN Home_Phone_fieldblock}		
+	<td>
+		{$label reps_Report Home_Phone}
+	</td>
+	<td>
+		<input type="checkbox" {$Home_Phone_notbox}>
+	</td>
+	<td>
+		{$searchtype_Home_Phone}
+	</td>
+	<td>
+		{$Home_Phone_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Home_Phone_editcontrol1}&nbsp;
+	</td>
+{END Home_Phone_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Work_Phone}">
+	{BEGIN Work_Phone_fieldblock}		
+	<td>
+		{$label reps_Report Work_Phone}
+	</td>
+	<td>
+		<input type="checkbox" {$Work_Phone_notbox}>
+	</td>
+	<td>
+		{$searchtype_Work_Phone}
+	</td>
+	<td>
+		{$Work_Phone_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Work_Phone_editcontrol1}&nbsp;
+	</td>
+{END Work_Phone_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Cellular_Phone}">
+	{BEGIN Cellular_Phone_fieldblock}		
+	<td>
+		{$label reps_Report Cellular_Phone}
+	</td>
+	<td>
+		<input type="checkbox" {$Cellular_Phone_notbox}>
+	</td>
+	<td>
+		{$searchtype_Cellular_Phone}
+	</td>
+	<td>
+		{$Cellular_Phone_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Cellular_Phone_editcontrol1}&nbsp;
+	</td>
+{END Cellular_Phone_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_E_mail}">
+	{BEGIN E_mail_fieldblock}		
+	<td>
+		{$label reps_Report E_mail}
+	</td>
+	<td>
+		<input type="checkbox" {$E_mail_notbox}>
+	</td>
+	<td>
+		{$searchtype_E_mail}
+	</td>
+	<td>
+		{$E_mail_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$E_mail_editcontrol1}&nbsp;
+	</td>
+{END E_mail_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Birthdate}">
+	{BEGIN Birthdate_fieldblock}		
+	<td>
+		{$label reps_Report Birthdate}
+	</td>
+	<td>
+		<input type="checkbox" {$Birthdate_notbox}>
+	</td>
+	<td>
+		{$searchtype_Birthdate}
+	</td>
+	<td>
+		{$Birthdate_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Birthdate_editcontrol1}&nbsp;
+	</td>
+{END Birthdate_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Country}">
+	{BEGIN Country_fieldblock}		
+	<td>
+		{$label reps_Report Country}
+	</td>
+	<td>
+		<input type="checkbox" {$Country_notbox}>
+	</td>
+	<td>
+		{$searchtype_Country}
+	</td>
+	<td>
+		{$Country_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Country_editcontrol1}&nbsp;
+	</td>
+{END Country_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_province}">
+	{BEGIN province_fieldblock}		
+	<td>
+		{$label reps_Report province}
+	</td>
+	<td>
+		<input type="checkbox" {$province_notbox}>
+	</td>
+	<td>
+		{$searchtype_province}
+	</td>
+	<td>
+		{$province_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$province_editcontrol1}&nbsp;
+	</td>
+{END province_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Postal_Code}">
+	{BEGIN Postal_Code_fieldblock}		
+	<td>
+		{$label reps_Report Postal_Code}
+	</td>
+	<td>
+		<input type="checkbox" {$Postal_Code_notbox}>
+	</td>
+	<td>
+		{$searchtype_Postal_Code}
+	</td>
+	<td>
+		{$Postal_Code_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Postal_Code_editcontrol1}&nbsp;
+	</td>
+{END Postal_Code_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

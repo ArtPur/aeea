@@ -1,0 +1,152 @@
+<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}"></div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_grid}
+
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+
+</style>
+
+{BEGIN pages}
+<div class="rp-repeat">
+<h1>School Report</h1>
+	
+</div>
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+		<div class="rnr-cw-grid rnr-s-grid asbuttons {$pageStyleName}">
+		{BEGIN grid_block}
+<TABLE class="rnr-c rnr-b-report report" CELLPADDING=0>
+<thead>
+<tr class="rnr-toprow table-header style1">
+
+<th>{$label School_Report School_Name}</th>
+<th>{$label School_Report Registration_Number}</th>
+<th>{$label School_Report Registration_Date}</th>
+<th>{$label School_Report School_Type}</th>
+<th>{$label School_Report P_O_Box}</th>
+<th>{$label School_Report Address}</th>
+<th>{$label School_Report City}</th>
+<th>{$label School_Report Postal_code}</th>
+<th>{$label School_Report province}</th>
+<th>{$label School_Report Country}</th>
+<th>{$label School_Report E_mail}</th>
+<th>{$label School_Report School_Phone}</th>
+<th>{$label School_Report Administrator}</th>
+<th>{$label School_Report Administrator_Cell}</th>
+<th>{$label School_Report Principal}</th>
+<th>{$label School_Report Longditude}</th>
+<th>{$label School_Report Latitude}</th>
+<th>{$label School_Report Representative}</th>
+<th>{$label School_Report Total_Students}</th>
+<th class="rnr-edge"></th>
+</tr>
+</thead>
+<tbody>
+{BEGIN grid_row}
+<!-------------------------------------  data ----------------------------------------->
+{BEGIN row_data}
+<tr class="rnr-row style1" {$rowattrs}>
+
+	<!-------------------------------------  begin detail links for row ----------------------------------------->
+	<!-------------------------------------  end detail links for row ----------------------------------------->
+
+	<td {$recordattrs}>{$School_Name_value}</td>
+	<td {$recordattrs}>{$Registration_Number_value}</td>
+	<td {$recordattrs}>{$Registration_Date_value}</td>
+	<td {$recordattrs}>{$School_Type_value}</td>
+	<td {$recordattrs}>{$P_O_Box_value}</td>
+	<td {$recordattrs}>{$Address_value}</td>
+	<td {$recordattrs}>{$City_value}</td>
+	<td {$recordattrs}>{$Postal_code_value}</td>
+	<td {$recordattrs}>{$province_value}</td>
+	<td {$recordattrs}>{$Country_value}</td>
+	<td {$recordattrs}>{$E_mail_value}</td>
+	<td {$recordattrs}>{$School_Phone_value}</td>
+	<td {$recordattrs}>{$Administrator_value}</td>
+	<td {$recordattrs}>{$Administrator_Cell_value}</td>
+	<td {$recordattrs}>{$Principal_value}</td>
+	<td {$recordattrs}>{$Longditude_value}</td>
+	<td {$recordattrs}>{$Latitude_value}</td>
+	<td {$recordattrs}>{$Representative_value}</td>
+	<td {$recordattrs}>{$Total_Students_value}</td>
+	<td class="rnr-edge" {$recordattrs}></td>
+</tr>
+{END row_data}
+{END grid_row}
+</tbody>
+</table>
+{END grid_block}
+	</div>		
+</div>
+{END pages}
+
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

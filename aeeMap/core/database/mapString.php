@@ -19,9 +19,9 @@ require_once 'connectMap.php';
 		 
 /** Check if there is data, if not give default data **/		
 	if(empty($result)) {
-    	$json_data  = array( 	'firstname' => 'www.aeegroup.co.za',
+    	$json_data  = array( 	'firstname' => 'www.aeea.org',
 	                     	'lastname' => '',
-				'email' => 'africa@aeegroup.co.za',
+				'email' => 'africa@aeea.org',
 				'photo' => '../images/Afrizone2.png');
 						   
  	 	echo json_encode($json_data);
@@ -29,9 +29,9 @@ require_once 'connectMap.php';
   	} 
 		  
 	$json_data  = array	'firstname' => $result['firstname'],
-	                     	'lastname' => $result['lastname'],
-			      	'email' => $result['email']);
-			      	//'photo' => $result['photo']);
+	                     	 'lastname' => $result['lastname'],
+				 'email' => $result['email'],					    
+				 'photo' => base64_decode($result['photo']));	
 						 						 
 		/** built in PHP function to encode the data in to JSON format 	**/						 
 	 	header('Content-Type: application/json');    

@@ -1,9 +1,6 @@
 <?php
 ini_set('display_errors',1);error_reporting(E_ALL);
-//$country_name = 'South Africa';  /** Try South Africa or country_name **/
 
-/** Connect to database **/
-//require '../core/database/mapString.php';
 ?>
 
 <!doctype html>
@@ -46,29 +43,27 @@ ini_set('display_errors',1);error_reporting(E_ALL);
 			</script>
 
 	<div id="IndexPage_Left_top">
-            <h1>Country: <span class="label" id="country_name"> </span></h1>                    
-        	<table >
-                   <tbody>                    
+            	<h1>Country: <span class="label" id="country_name"> </span></h1>                    
+        		<table >
+                	<tbody>                    
                       <tr>
                       <td><h4>Regional Representative:</h4></td>
                       <td style="text-align:right"><h3><span class="label" id="firstname"></span> <span class="label" id="lastname"></span></h3></td>
                       </tr>
-                      <tr height="20px"></tr>
+                      <tr height="30px"></tr>
                       <tr height="200px" align="bottom">
-                      <td align="bottom"><h4> Photo:</h4></td>
-                      <td id="photo" name="photo" class="photo" background="../images/profile/placeholder.png" colspan="2"></td>
-                      </tr>
-                      <tr height="20px"></tr>
+                      <td align="bottom"></td>
+                      <td id="photo" class="photo"></td>
+                      </tr>                      
                       <tr>
                       <td id="email" name="email" class="email"></td>
                       <td><input style='margin-top: 20px;' type="submit" value="Contact me" id="jqxButton" /></td>
-                      <td src="../forms/emailform.html" target="IndexPage_Left_bottom"</td>
-                      <!--src="../forms/emailform.html" target="IndexPage_Left_bottom" -->
+                      <td src="../forms/emailform.html" target="IndexPage_Left_bottom"></td>                      
                       </tr><!-- if clicked, it opens a contact form below, the email address is from the database and hidden-->
 					 
                     </tbody>
               	</table>	
-           </div>
+            </div>
         	<div id="IndexPage_Left_bottom">
             
             	<div id="contactable"></div>
@@ -76,7 +71,6 @@ ini_set('display_errors',1);error_reporting(E_ALL);
         	</div>
      	</div>
   		<div id="IndexPage_Right">
-
   		
 <svg id="map" version="1.1"
 	 xmlns:cc="http://web.resource.org/cc/"
@@ -1930,12 +1924,14 @@ ini_set('display_errors',1);error_reporting(E_ALL);
 				  	$('#firstname').html(json_data.firstname); 
 				  	$('#lastname').html(json_data.lastname);
 				  	$('#email').html(json_data.email); 
-					$('#photo').html(json_data.photo);
+					var img = $('<img id="photo">'); //$(document.createElement('photo'))
+					img.attr('src', json_data.photo); 
+					img.appendTo('#photo');
 					},
 					/** error handling. **/		
         			error: function(xhr, status, error) {
           			//var err = eval("(" + xhr.responseText + ")");
-          				$('<div id="fb-root" />').html(xhr.responseText).prependTo('body');
+          				$('<div id="IndexPage_Left_top" />').html(xhr.responseText).prependTo('body');
 					},	
 		  		}); 
 	}

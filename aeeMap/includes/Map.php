@@ -73,14 +73,16 @@ ini_set('display_errors',1);error_reporting(E_ALL);
   		<div id="IndexPage_Right">
   		
 <svg id="map" version="1.1"
-	 xmlns:cc="http://web.resource.org/cc/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:svg="http://www.w3.org/2000/svg"
-     xmlns="http://www.w3.org/2000/svg"
-	 xmlns:xlink="http://www.w3.org/1999/xlink"		  
-	 viewBox="0 0 800 720" 
-	 xml:preserveAspectRatio="xMidYMid meet">
+	xmlns:cc="http://web.resource.org/cc/"
+     	xmlns:dc="http://purl.org/dc/elements/1.1/"
+     	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     	xmlns:svg="http://www.w3.org/2000/svg"
+     	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+     	width= "800" 
+     	height="720"   
+	viewBox="0 0 800 720" 
+	xml:preserveAspectRatio="xMidYMid meet">
 <defs>
         <radialGradient id="RadialGradient"
            fx="50%" fy="50%" r="50%"
